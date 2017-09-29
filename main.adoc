@@ -1,10 +1,12 @@
-= document-title       // タイトル
-フリービット株式会社           // 著者
-v0.1(Draft) 2017/09/01      // 版数情報
+= document-title
+
+hogehoge株式会社    // 著者
+v0.1(Draft) 2017/09/01      / 版数情報
 
 //==============================================================
 // Attribute / アトリビュート
 //==============================================================
+
 :lang: ja                                 // 日本語ドキュメント
 :doctype: book                            // 文書タイプは book にする
 :description:                             // ドキュメントに関する説明
@@ -20,7 +22,6 @@ v0.1(Draft) 2017/09/01      // 版数情報
 :toc:
 :toclevels: 3
 :source-highlighter: coderay
-
 :toc-title: 目次
 :preface-title: はじめに
 :appendix-caption: 付録
@@ -35,7 +36,52 @@ v0.1(Draft) 2017/09/01      // 版数情報
 :preface-title: まえがき
 :table-caption: 表
 :tip-caption: ヒント
-:toc-title: 目次
 :untitled-label: 無題
 :version-label: バージョン
 :warning-caption: 警告
+
+
+//==============================================================
+// Attribute / アトリビュート
+//==============================================================
+
+= はじめての AsciiDoc ドキュメント
+
+これは AsciiDoc で書かれたドキュメントです。
+
+== セクション
+
+``=`` から始まる行はセクションの見出しになります。 +
+``==``, ``===``, ... のように `=` を重ねるとレベルが1つ下がります。
+
+== テーブル（表）
+
+.テーブル見出し
+
+|=======================
+|Col 1|Col 2      |Col 3
+|1    |Item 1     |a
+|2    |Item 2     |b
+|3    |Item 3     |c
+|=======================
+
+CSV 形式で書くこともできます。
+
+[format="csv"]
+|======
+1,2,3,4
+a,b,c,d
+A,B,C,D
+|======
+
+== ソースコード
+=== コメント
+
+[source, javascript]
+----
+export default class MyComponent extends React.Component {
+    render() {
+        <div>Hello, World!</div>
+    }
+}
+----
